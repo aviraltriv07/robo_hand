@@ -13,7 +13,7 @@ Controls:
   c       - Calibrate closed hand (make a fist, then press)
   p       - Pause/resume serial sending (servos hold position)
   d       - Toggle debug overlay on the video
-  SPACE   - Send a single test command (all servos to 90°)
+  SPACE   - Send a single test command (all servos to 90 degrees)
 
 Usage:
   1. Upload arduino_servo_control.ino to your Arduino.
@@ -171,7 +171,7 @@ def main():
 
     # What to do when the hand disappears:
     # Hold the last known servo angles (don't snap to zero)
-    last_servo_angles = [90, 90, 90, 90, 90]
+    last_servo_angles = [0, 0, 0, 180, 180]
     last_percentages = [0.0, 0.0, 0.0, 0.0, 0.0]
 
     # Track how many consecutive frames with no hand
